@@ -8,7 +8,6 @@ export default function Orders({ data }) {
 
   return (
     <div>
-      <h1>Orders</h1>
       {data.map((order,index) => (
         <div key={index}>
           {createOrderCard(order)}

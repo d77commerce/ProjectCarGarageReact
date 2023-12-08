@@ -39,56 +39,33 @@ border: none;
     background-color: #f0920e;
 }
 `;
-export const StyledForm = styled.form`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-width: 50%;
-margin: 0 auto;
-align-self: flex-start; /* Align the form to the left side */
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  width: 100%;
-
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+export const ButtonR = styled.button`
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: #1f2937;
+  background-color: #f0b322;
+  border-radius: 6px;
+  border: none;
+  margin-left: auto; /* Align to the right */
+  
+  &:hover {
+    background-color: #f0920e;
   }
-
-  input,
-  select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-  }
-
-  .input-group {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-
-    input {
-      width: 50%;
-    }
-  }
-}
-
-.form-button {
-  display: block;
-  margin-top: 20px;
-  align-self: flex-end; /* Align the button to the right side */
-  padding: 10px 20px;
-  border: 1px solid #007bff;
-  border-radius: 4px;
-  color: #007bff;
-  cursor: pointer;
-}
 `;
+
+export const StyledForm = styled.form`
+  display: flex;
+  flex-direction: row; /* Change to row */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 100%; /* Use full width */
+  gap: 20px; /* Add some space between form elements */
+  margin: 20px; /* Add margin to the top */
+ 
+`;
+
 export const StyledTable = styled.table`
   border-collapse: collapse;
   width: 100%;

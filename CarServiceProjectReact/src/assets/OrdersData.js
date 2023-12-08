@@ -22,6 +22,28 @@ const OrdersData = [
     },
   },
   {
+    date: '07/12/2023',
+    mechanicName: 'Minko Papazov',
+    carInfo: {
+      regNo: 'XXX555XX',
+      make: 'Toyota',
+      model: 'Camry',
+      year: 2021,
+      fuel: 'Petrol',
+      mileage: 440000,
+      transmission: 'Automatic',
+    },
+    customerInfo: {
+      name: 'John Pechinov',
+      phone: '123-456-7890',
+      email: 'johndoe@example.com',
+    },
+    servicesInfo: {
+      taskDescription: 'General service, including oil change, filter replacement, and tire rotation.',
+      totalPrice: 300,
+    },
+  },
+  {
     date: '08/12/2023',
     mechanicName: 'Petr Petrov',
     carInfo: {

@@ -14,6 +14,7 @@ export default function Navigation() {
           <Link to='/orders/byDate'>By Date</Link>
           <Link to='/orders/byCustomerName'>By Customer Name</Link>
           <Link to='/orders/byRegNo'>By Registration No</Link>
+          <Link to='/orders/byCustomerPhone'>By Customer Phone No</Link>
         </div>
       </Dropdown>
       <Link to='/mechanics'><Button>Mechanics</Button></Link>
