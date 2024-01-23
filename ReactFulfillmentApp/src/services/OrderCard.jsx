@@ -8,7 +8,7 @@ export default function createOrderCard(mechanicData) {
   return (
     
     <Card>
-      <Link to=''><Button >Print</Button></Link> 
+    <Button >Print</Button>
       <CardHeader>
         <h2>Service Details</h2>
         <p>Date: {date}</p>

@@ -18,7 +18,6 @@ export default function App() {
     <>
     <Navigation />
       <Header />
-      
        <Routes>
         <Route path='/'element={<AuthInputs/>}/>
         <Route path='/NewAccount'element={<NewAccount/>}/> 
