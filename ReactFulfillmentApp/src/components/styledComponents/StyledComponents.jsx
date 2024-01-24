@@ -105,7 +105,7 @@ border: 2px solid orange;
 
 export const TableHeader = styled.thead`
   th {
-    text-align: left;
+    text-align: center;
     padding-right: 10px;
   }
 `;
@@ -120,4 +120,34 @@ export const TableRow = styled.tr`
   background-color: #eee;
   padding: 10px 15px;
   border-bottom: 1px solid #ccc;
+  text-align: center;
+`;
+
+export const LeftSideMenuContainer = styled.div`
+  width: 20%;
+  height: auto;
+  background-color: #2c3e50; /* Set your preferred background color */
+  display: flex;
+  flex-direction: column;
+ 
+  padding: 20px;
+`;
+
+export const LeftMenuItem = styled.a`
+  color: #ecf0f1; /* Set your preferred text color */
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 15px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const Footer = styled.footer`
+  background-color: #2c3e50; /* Set your preferred background color */
+  color: #ecf0f1; /* Set your preferred text color */
+  padding: 20px;
+  text-align: center;
 `;

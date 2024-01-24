@@ -22,6 +22,8 @@ export default function AuthInputs() {
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
+    <>
+
     <div id="auth-inputs">
       <ControlContainer>
         <p>
@@ -49,6 +51,9 @@ export default function AuthInputs() {
         </Link>
         <button className='button' onClick={handleLogin}>Sign In</button>
       </div>
-    </div>
+     
+    </div> 
+     <br/>
+       </>
   );
 }

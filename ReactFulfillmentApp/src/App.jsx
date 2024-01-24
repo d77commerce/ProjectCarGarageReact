@@ -7,11 +7,18 @@ import NewOrder from './components/orders/NewOrder.jsx';
 import ByCustomerName from './components/orders/ByCustomerName.jsx';
 import OwnerSettings from './components/ownerSettings/OwnerSetings.jsx';
 import AllMechanics from './services/AllMechanics.jsx';
+import MyAccount from './myAccount/MyAccount.jsx';
+
 
 import OrderAll from './components/orders/OrdersAll.jsx';
 import ByDate from './components/orders/ByDate.jsx';
 import ByRegNo from './components/orders/ByRegNo.jsx';
 import ByCustomerPhone from './components/orders/ByCustomerPhone.jsx';
+import MyOrders from './components/orders/MyOrders.jsx';
+import { Button, Footer } from './components/styledComponents/StyledComponents.jsx';
+import Product from './products/Product.jsx';
+import Products from './products/products.jsx';
+import NewProduct from './products/NewProduct.jsx';
 
 export default function App() {
   return (
@@ -29,9 +36,18 @@ export default function App() {
         <Route path='/mechanics'element={<AllMechanics/>}/>
         <Route path='/allOrders'element={<OrderAll/>}/>
         <Route path='/ownerSettings'element={<OwnerSettings/>}/>
+        <Route path='/myOrders'element={<MyOrders/>}/>
+        <Route path='/about'element={<h1 style={{ textAlign: 'center' }}>About</h1>} />
+        <Route path='/myAccount'element={<MyAccount/>} />
         <Route path='/*' element={<h1 style={{ textAlign: 'center' }}>404 Not Found</h1>} />
+        <Route path='/products'element={<Products/>}/>
+        <Route path='/product/:id'element={<Product/>}/>
+        <Route path='/newProduct'element={<NewProduct/>} />
       </Routes>
-      
+      <Footer>
+        <p>© 2021. All rights reserved.</p>
+        <button >Terms of Service</button>
+      </Footer>
     </>
   );
 }

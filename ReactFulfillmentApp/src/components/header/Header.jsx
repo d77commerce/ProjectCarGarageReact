@@ -5,8 +5,8 @@ export default function Header() {
   return (
     <header>
     
-      <h1>Car Service</h1>
-      <p>"Precision in Every Repair: Elevate Your Garage Management with Our Software"</p>
+      <h1>Fulfillment Service</h1>
+      <p>"Right place to storage your products !"</p>
      
     </header>
   );

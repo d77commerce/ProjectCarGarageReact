@@ -16,10 +16,13 @@ export default function Navigation() {
           <Link to='/orders/byRegNo'>By Registration No</Link>
           <Link to='/orders/byCustomerPhone'>By Customer Phone No</Link>
         </div>
-      </Dropdown>
-      <Link to='/mechanics'><Button>Mechanics</Button></Link>
-      <Link to='/ownerSettings'><Button>Control Panel</Button></Link>  
+      </Dropdown>  
       <Link to='/'><Button>Exit</Button></Link>
+      <Link to='/login'><Button>Logout</Button></Link>
+      <Link to='/newProduct'><Button>New Product</Button></Link>
+      <Link to='/products'><Button>My Products</Button></Link>
+      <Link to='/myAccount'><Button>My Account</Button></Link>
+      <Link to='/myOrders'><Button>My Orders</Button></Link>
     </div>
   );
 }

@@ -88,10 +88,10 @@ export default function NewOrder() {
 
 <div   id="auth-inputs">
    <ControlContainer>
-        <p  >
+        <div >
           <h3>Services Info</h3>
           <Input type="text" placeholder="Enter task" />
-        </p>
+        </div>
         <p>
           <Input type="number" placeholder="Enter service price" />
         </p>
@@ -102,6 +102,7 @@ export default function NewOrder() {
         <Button >Save (ADD ORDER)</Button> 
    </ControlContainer>
 </div>
+<br/>
      </>
   );
 }
