@@ -1,11 +1,10 @@
 import { Table,TableBody,TableHeader, TableRow,Button } from "../components/styledComponents/StyledComponents";
-import Data from "../assets/ProductsData";
 import { useState, useEffect } from 'react';
 const URL = 'http://localhost:3030/jsonstore/products';
 
 export default function Products() {
   const [data,setData] = useState(null); 
-  
+ 
   useEffect(() => {
     fetch(URL)
       .then((res) => res.json())

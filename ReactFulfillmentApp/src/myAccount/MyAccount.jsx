@@ -1,11 +1,12 @@
-import Calendar from 'react-calendar';
-import {LeftSideMenuContainer,LeftMenuItem, StyledTable} from '../components/styledComponents/StyledComponents.jsx';
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { StyledTable, TableBody, TableHeader } from '../components/styledComponents/StyledComponents';
+import MenuLeftSide from '../components/menu/MenuLeftSide';
+
 
 const URL = 'http://localhost:3030/jsonstore/users';
 
-export default function LeftSideMenu() {
+export default function Menu() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -16,22 +17,12 @@ export default function LeftSideMenu() {
 
   return(
     <>
+    <MenuLeftSide />
     <div style={{ display: 'flex' }}>
-    <LeftSideMenuContainer> 
-        <Calendar />
-        <br/>
-        <Link to="/"><button style={{color :"red"}}>Today</button></Link>
-        <br/>
-        <button style={{color :"red"}}>Yesterday</button>
-        <br/>
-        <button style={{color :"red"}}>Last Week</button>
-        <br/>
-        <button style={{color :"red"}}>Last Month</button>
    
-    </LeftSideMenuContainer>
     {/* Add the rest of your content here */}
     <StyledTable>
-      <thead>
+      <TableHeader>
         <tr>
           <th>Order ID</th>
           <th>Date of the Order</th>
@@ -40,8 +31,8 @@ export default function LeftSideMenu() {
           <th>Actions</th>
       
         </tr>
-      </thead>
-      <tbody>
+      </TableHeader>
+      <TableBody>
         {data && data.map((element,index) => (
           <tr key={index}>
             <td>{element._id}</td>
@@ -53,7 +44,7 @@ export default function LeftSideMenu() {
            </td>
           </tr>
         ))}
-      </tbody>
+      </TableBody>
     </StyledTable>
   </div>
     </>

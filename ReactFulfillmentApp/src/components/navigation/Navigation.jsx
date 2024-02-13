@@ -6,6 +6,7 @@ import './Navigation.css';
 
 export default function Navigation() {
   return (
+    <>
     <div className='actions'>
       <Link to='/newOrder'><Button>New Order</Button></Link>
       <Dropdown>   
@@ -23,6 +24,11 @@ export default function Navigation() {
       <Link to='/products'><Button>My Products</Button></Link>
       <Link to='/myAccount'><Button>My Account</Button></Link>
       <Link to='/myOrders'><Button>My Orders</Button></Link>
+      
     </div>
+     <hr/>
+    </>
+    
+   
   );
 }

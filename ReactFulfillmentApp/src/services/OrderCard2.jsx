@@ -1,21 +1,23 @@
 import React from 'react';
 import { Card, CardHeader, Table, TableHeader, TableBody, TableRow, Button} from '../components/styledComponents/StyledComponents';
+import './OrderCard.css';
 
 
 export default function CreateOrderCard2(data) {
-  const { Id,
+  const {   
+    Id,
     DateTime,
     OwnerId,
-    ProductId,
+    Products,
     Quantity,
-    Packaging,
+    Packaging: {Type, Material},
     AddType,
     AddPaper,
     AddBubbleWraps,
     Status,
     Courier,
     TraysNo,
-    Instruction ,
+    Instruction,
     ReceiverFirstName,
     ReceiverLastName,
     ReceiverPhone,
@@ -28,10 +30,21 @@ export default function CreateOrderCard2(data) {
     CustomerMessage
   } = data;
   return (
+    <>
     
     <Card>
+      <div className='actions'>
     <Button >Print</Button>
+    <Button onClick={()=>window.location.href = `http://localhost:5173/fullinfo/${Id}`}>Full Details</Button>
+    <Button onClick={()=>window.location.href = `http://localhost:5173/order/edit/${Id}`}>Edit</Button>
+    <Button >Delete</Button>
+    </div>
       <CardHeader>
+        <h2>Receiver Details</h2>
+        <p>Name: {ReceiverFirstName} {ReceiverLastName}</p>
+        <p>Phone: {ReceiverPhone}</p>
+        <p>Address: {ReceiverCountry}, {ReceiverCity}, {ReceiverStreet}, {ReceiverAddressLine1}, {ReceiverAddressLine2}, {ReceiverPostcode}</p>
+      
         <h2>Service Details</h2>
         <p>Date: {DateTime}</p>
         <p>Status: {Status}</p>
@@ -40,12 +53,12 @@ export default function CreateOrderCard2(data) {
         <TableHeader>
           <tr>
           <th>Order ID</th>
-          <th>Product ID</th>
+          <th>Products Id's</th>
           <th>Quantity</th>
           <th>Packaging</th>
           <th>Add Type</th>
           <th>Add Paper</th>
-          <th>Add Bubble Wraps</th>
+          <th>Bubble Wraps</th>
           <th>Trays No</th>
           <th>Instruction</th>
           <th>Customer Message</th>
@@ -54,9 +67,12 @@ export default function CreateOrderCard2(data) {
         <TableBody>
           <TableRow>
             <td>{Id}</td>
-            <td>{ProductId}</td>
+            {Products.map((x,index) => (
+            <td key={index}>{x}</td>
+            ))}
+
             <td>{Quantity}</td>
-            <td>{Packaging.Type}</td>
+            <td>{Type} - {Material}</td>
             <td>{AddType}</td>
             <td>{AddPaper}</td>
             <td>{AddBubbleWraps}</td>
@@ -68,5 +84,6 @@ export default function CreateOrderCard2(data) {
         </Table>
 
     </Card>
+    </>
   );
 }

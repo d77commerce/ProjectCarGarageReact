@@ -19,12 +19,14 @@ import { Button, Footer } from './components/styledComponents/StyledComponents.j
 import Product from './products/Product.jsx';
 import Products from './products/products.jsx';
 import NewProduct from './products/NewProduct.jsx';
+import FullOrderInfo from './components/orders/FullOrderInfo.jsx';
+import OrdersByCourierStatus from './components/orders/OrdersByCourierStatus.jsx';
 
 export default function App() {
   return (
     <>
     <Navigation />
-      <Header />
+     
        <Routes>
         <Route path='/'element={<AuthInputs/>}/>
         <Route path='/NewAccount'element={<NewAccount/>}/> 
@@ -43,6 +45,8 @@ export default function App() {
         <Route path='/products'element={<Products/>}/>
         <Route path='/product/:id'element={<Product/>}/>
         <Route path='/newProduct'element={<NewProduct/>} />
+        <Route path='/fullInfo/:id'element={<FullOrderInfo/>}/>
+        <Route path='/OrdersByCourierStatus/:status' element={<OrdersByCourierStatus/> }/>
       </Routes>
       <Footer>
         <p>© 2021. All rights reserved.</p>

@@ -87,8 +87,9 @@ export const StyledTable = styled.table`
   }
 `;
 export const Card = styled.div`
-  border: 3px solid gray;
-  padding: 10px;
+  border: 4px solid gray;
+  padding: 22px;
+  margin: 2px;
   margin-bottom: 20px;
 `;
 
@@ -100,7 +101,7 @@ export const CardHeader = styled.div`
 export const Table = styled.table`
 border: 2px solid orange;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px;
 `;
 
 export const TableHeader = styled.thead`
@@ -112,6 +113,7 @@ export const TableHeader = styled.thead`
 
 export const TableBody = styled.tbody`
   td {
+    text-align: center;
     padding-bottom: 5px;
   }
 `;

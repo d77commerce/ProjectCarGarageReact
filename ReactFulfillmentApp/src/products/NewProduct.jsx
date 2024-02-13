@@ -1,5 +1,6 @@
 import  { useState, useRef } from 'react';
 import { Input, Button } from "../components/styledComponents/StyledComponents";
+import "./NewProduct.css";
 
 
 export default function NewProduct() {
@@ -59,9 +60,42 @@ export default function NewProduct() {
     }   
     return (
         <>
-            <div  id="auth-inputs">
-                <h2>Add Product Info</h2>
-                <Input type="text" placeholder="Enter product name" ref={inputRefName} />
+            <h1 style={{ textAlign: 'center' }}>New Product</h1>
+              <div className="Right-side">
+                <div id ="auth-inputs">
+                    <h2>Storage and delivery</h2>
+                    <Input type="text" placeholder="Enter order number" />
+                    <Input type="text" placeholder="Enter order date"  />
+                    <Input type="text" placeholder="Enter order status" />
+                    <Input type="text" placeholder="Enter order payment" />
+                    <Input type="text" placeholder="Enter order delivery" />
+                    <Input type="text" placeholder="Enter order total" />
+                    <Input type="text" placeholder="Enter order discount" />
+                  
+                    </div>
+                    <hr/>
+                    <div id ="auth-inputs">
+                    <Button onClick={setProductInfo}>Add Product</Button>
+                    </div>
+            </div>
+            <div className="left-side">
+                <div id ="auth-inputs">
+                    <h2>Product Info</h2>
+                    <Input type="text" placeholder="Enter product name" ref={inputRefName} />
+                    <Input type="text" placeholder="Enter product price" ref={inputRefPrice} />
+                    <Input type="text" placeholder="Enter order number" />
+                    <Input type="text" placeholder="Enter order date"  />
+                    <Input type="text" placeholder="Enter order status" />
+                    <Input type="text" placeholder="Enter order payment" />
+                    <Input type="text" placeholder="Enter order delivery" />
+                    <Input type="text" placeholder="Enter order total" />
+                    <Input type="text" placeholder="Enter order discount" />
+                    <Input type="text" placeholder="Enter order tax" />
+                    </div>
+            </div>
+            <div className='center'>
+             <div  id="auth-inputs">
+                <h2>Product Qth and price</h2>
                 <Input type="text" placeholder="Enter product price" ref={inputRefPrice} />
                 <Input type="text" placeholder="Enter product quantity" ref={inputRefQuantity} />
                 <Input type="text" placeholder="Enter product barcode" ref={inputRefProductBarcode} />
@@ -72,33 +106,10 @@ export default function NewProduct() {
                 <Input type="text" placeholder="Enter product description" ref={inputRefDescription} />
                 <Input type="text" placeholder="Enter product shortDescription" ref={inputRefShortDescription} />
                 <Input type="text" placeholder="Enter product producerId" ref={inputRefProducerId} />
-                <Input type="text" placeholder="Enter product clientId" ref={inputRefClientId} />
-                <Button onClick={setProductInfo}>Add Product</Button>
-                <h2>Customer Info</h2>
-                <Input type="text" placeholder="Enter customer name" />
-                <Input type="text" placeholder="Enter customer email" />
-                <Input type="text" placeholder="Enter customer phone" />
-                <Input type="text" placeholder="Enter customer address" />
-                <Button onClick={setCustomer}>Add Customer</Button>
             </div>
-            <div className="right-side">
-                <div className="order-info">
-                    <h2>Order Info</h2>
-                    <Input type="text" placeholder="Enter order number" />
-                    <Input type="text" placeholder="Enter order date"  />
-                    <Input type="text" placeholder="Enter order status" />
-                    <Input type="text" placeholder="Enter order payment" />
-                    <Input type="text" placeholder="Enter order delivery" />
-                    <Input type="text" placeholder="Enter order total" />
-                    <Input type="text" placeholder="Enter order discount" />
-                    <Input type="text" placeholder="Enter order tax" />
-                    <Input type="text" placeholder="Enter order subtotal" />
-                    <Input type="text" placeholder="Enter order total" />
-                    <Input type="text" placeholder="Enter order total" />
-                    <Input type="text" placeholder="Enter order total" />
-                    <Input type="text" placeholder="Enter order total" />
-                    </div>
             </div>
+           <hr/>
+            
         </>
     );
     }

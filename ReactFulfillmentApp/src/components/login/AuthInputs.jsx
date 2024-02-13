@@ -23,7 +23,11 @@ export default function AuthInputs() {
 
   return (
     <>
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
     <div id="auth-inputs">
       <ControlContainer>
         <p>
@@ -54,6 +58,10 @@ export default function AuthInputs() {
      
     </div> 
      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
        </>
   );
 }
