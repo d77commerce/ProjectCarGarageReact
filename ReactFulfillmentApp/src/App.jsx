@@ -1,5 +1,4 @@
 import AuthInputs from './components/login/AuthInputs.jsx';
-import Header from './components/header/Header.jsx';
 import {Routes, Route} from 'react-router-dom';
 import NewAccount from './components/newAccount/NewAccount.jsx';
 import Navigation from './components/navigation/Navigation.jsx';
@@ -15,9 +14,9 @@ import ByDate from './components/orders/ByDate.jsx';
 import ByRegNo from './components/orders/ByRegNo.jsx';
 import ByCustomerPhone from './components/orders/ByCustomerPhone.jsx';
 import MyOrders from './components/orders/MyOrders.jsx';
-import { Button, Footer } from './components/styledComponents/StyledComponents.jsx';
+import {  Footer } from './components/styledComponents/StyledComponents.jsx';
 import Product from './products/Product.jsx';
-import Products from './products/products.jsx';
+import Products from './products/Products.jsx';
 import NewProduct from './products/NewProduct.jsx';
 import FullOrderInfo from './components/orders/FullOrderInfo.jsx';
 import OrdersByCourierStatus from './components/orders/OrdersByCourierStatus.jsx';

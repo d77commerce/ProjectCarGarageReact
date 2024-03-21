@@ -53,7 +53,7 @@ export default function CreateOrderCard2(data) {
         <TableHeader>
           <tr>
           <th>Order ID</th>
-          <th>Products Id's</th>
+          <th>Products </th>
           <th>Quantity</th>
           <th>Packaging</th>
           <th>Add Type</th>
@@ -67,15 +67,16 @@ export default function CreateOrderCard2(data) {
         <TableBody>
           <TableRow>
             <td>{Id}</td>
-            {Products.map((x,index) => (
-            <td key={index}>{x}</td>
-            ))}
+            <td>
+  {Products && typeof Products === 'object' ? Object.keys(Products).join(', ') : 'No data'}
+</td>
+
 
             <td>{Quantity}</td>
             <td>{Type} - {Material}</td>
-            <td>{AddType}</td>
-            <td>{AddPaper}</td>
-            <td>{AddBubbleWraps}</td>
+            <td>{AddType ?'Yes':'No'}</td>
+            <td>{AddPaper ?'Yes':'No'}</td>
+            <td>{AddBubbleWraps ?'Yes':'No'}</td>
             <td>{TraysNo}</td>
             <td>{Instruction}</td>
             <td>{CustomerMessage}</td>

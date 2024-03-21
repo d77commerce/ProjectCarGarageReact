@@ -1,5 +1,5 @@
 import { Button} from '../styledComponents/StyledComponents';
-import Dropdown from '../dropDown/DropDown';
+import Dropdown from '../dropdown/Dropdown';
 
 import { Link } from 'react-router-dom';
 import './Navigation.css';

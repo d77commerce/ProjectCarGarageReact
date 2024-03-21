@@ -64,10 +64,7 @@ export default function FullOrderInfo(){
             <TableRow>
                 <td>{data.DateTime}</td>
                 <td>{ data.OwnerId}</td>
-                {data.Products.Id.map((x,index) => (
-                <td key={index}>{x}</td>
-                ))}
-
+                <td>{data.Products && data.Products.Id}</td>
                 <td>{ data.Quantity}</td>
                 <td>Type: {data.Packaging.Type}-{data.Packaging.Material}</td>
                 <td>{ data.AddType ? 'Yes':'No'}</td>
